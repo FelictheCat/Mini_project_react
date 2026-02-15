@@ -15,7 +15,7 @@ function ProductCard(props) {
 
       {props.product.stock > 0 ? <p>In Stock ✅</p> : <p>Out of Stock ❌</p>}
 
-      <button onClick={function () {
+      <button onClick={() => {
           props.selectProduct(props.product);
         }}
       >

@@ -14,12 +14,13 @@ function Dashboard(props) {
       <ProductList
         products={props.products}
         deleteProduct={props.deleteProduct}
+        selectedProduct={props.selectedProduct}
       />
         {props.selectedProduct && (
-            <EditProductForm 
-                selectedProduct={props.selectedProduct} 
-                updateProduct={props.updateProduct} 
-                setSelectedProduct={props.setSelectedProduct} /> 
+         <EditProductForm 
+        selectedProduct={props.selectedProduct} 
+        updateProduct={props.updateProduct} 
+        setSelectedProduct={props.setSelectedProduct} /> 
         )}
     </>
     
