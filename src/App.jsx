@@ -13,7 +13,6 @@ import NotFound from "./pages/NotFound";
 
 import { useState } from "react";
 import productsData from "./data/products.json";
-import EditProductForm from "./components/EditProductForm";
 import AddProductForm from "./components/AddProductForm";
 
 function App() {
@@ -63,7 +62,7 @@ function App() {
                 deleteProduct={deleteProduct}
                 addProduct={addProduct}
                 selectedProduct={selectedProduct}
-                setSelectedProduct={setSelectedProduct}
+                selectProduct={setSelectedProduct}
                 updateProduct={updateProduct}
               />
             }
@@ -77,16 +76,6 @@ function App() {
           <Route
             path="/create"
             element={<AddProductForm addProduct={addProduct} />}
-          />
-
-          <Route
-            path="/edit/:id"
-            element={
-              <EditProductForm
-                products={products}
-                updateProduct={updateProduct}
-              />
-            }
           />
 
           <Route path="/about" element={<About />} />

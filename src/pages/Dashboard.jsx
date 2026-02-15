@@ -11,19 +11,19 @@ function Dashboard(props) {
 
       <AddProductForm addProduct={props.addProduct} />
 
+      {props.selectedProduct && (
+        <EditProductForm
+          product={props.selectedProduct}
+          updateProduct={props.updateProduct}
+        />
+      )}
+
       <ProductList
         products={props.products}
         deleteProduct={props.deleteProduct}
-        selectedProduct={props.selectedProduct}
+        selectProduct={props.selectProduct}
       />
-        {props.selectedProduct && (
-         <EditProductForm 
-        selectedProduct={props.selectedProduct} 
-        updateProduct={props.updateProduct} 
-        setSelectedProduct={props.setSelectedProduct} /> 
-        )}
     </>
-    
   );
 }
 

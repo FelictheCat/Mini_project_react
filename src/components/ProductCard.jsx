@@ -16,17 +16,20 @@ function ProductCard(props) {
       {props.product.stock > 0 ? <p>In Stock ✅</p> : <p>Out of Stock ❌</p>}
 
       <button onClick={() => {
+        props.deleteProduct(props.product.id);
+        }}>
+        Delete
+      </button>
+      
+      
+      <button onClick={() => {
           props.selectProduct(props.product);
         }}
       >
         Edit
       </button>
 
-      <button onClick={() => {
-        props.deleteProduct(props.product.id);
-        }}>
-        Delete
-      </button>
+
     </div>
   );
 }
